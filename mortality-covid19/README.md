@@ -1,6 +1,6 @@
 # How many people really die connected to COVID-19 in Italy?
 
-At the end of February 2020 the COVID-19 epidemic surprised the first European country, Italy. Soon after the local authorities started to publish daily epidemic information including number of confirmed cases and deaths. However after few weeks it became clear that the official data might be flawed because of problems related to data collection methodology and other reasons.
+At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) surprised the first European country, Italy. Soon after the local authorities started to publish daily epidemic information including number of confirmed cases and deaths. However after few weeks it became clear that the official data might be flawed because of problems related to data collection methodology and other reasons.
 
 In this article we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities as reported by the Italian National Institute of Statistics and compare it to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures.
 
@@ -88,11 +88,16 @@ The following diagrams shows the excess mortality during March 2020 in selected 
 
 You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
 
+On the other hand the official number of victims attributed to COVID-19 can be accessed from the [GitHub repository](http://github.com/pcm-dpc/COVID-19) of the Civil Protection Department.
+
+
 ### Issues of geographic aggregations
 
 Unfortunately the daily mortality data is available only for 1450 municipalities (out of 7904) of Italy. In these municipalities lives approximately 17.04 million persons (out of 60.36 million) that corresponds to 28% of the population of Italy. The data availability varies significantly between regions, for example in Lombardy 554 municipalities (out of 1506) provide the data that corresponds to 67% of the population. 
 
 Because the mortality rate is not available for all municipalities in a given territory, we should find a way to estimate the mortality for the territory. We can not simple add the number of deaths for the municipalities where we have the data as it would heavily underestimate the real mortality. For the sake of simplicity (and because we do not have other data source) we will scale up the mortality data based on the rate of total population of the territory and the population of the municipalities in the territory that provided mortality data. This way we implicitly suppose that these municipalities are representative in their territory from the point of view of mortality, which is not necessarily true.
+
+The [population dataset of all Italian municipalities](http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1) (as of 1st January 2019) can be downloaded from ISTAT. We will use this dataset to calculate the percentage of the population in the municipalities with daily mortality data compared to the total population of the given region.
 
 On the other hand the number of deaths officially attributed to COVID-19 is available on no lower than regional level, so we will estimate the mortality rate for the regions.
 
