@@ -20,7 +20,7 @@ Second, in Italy the **health services are fragmented** as they are managed on a
 
 And at last, there might be **political reasons** not to change an established, nevertheless wrong data collection methodology. For example [China changed several times](https://edition.cnn.com/2020/02/21/health/coronavirus-reported-cases-covid-19-change-intl/index.html) its testing policy and on 12th February one such change resulted in a sudden jump in the positive cases. Almost all published diagrams showing the Chinese COVID-19 cases evolution note that the cause of this jump is a change in the methodology, but not all people read the small letter annotations. The risk that such a methodology change can cause confusion or even scare in the public is real.
 
-![China changed case definition on 12th February](mortality/china_case_definition.png)
+![China changed case definition on 12th February](figures/china_case_definition.png)
 
 
 ### Testing only people reaching the hospital
@@ -64,10 +64,27 @@ Confronting the mortality rate of 2020 with the baseline (the mean mortality rat
 
 The daily mortality rate for the participating municipalities can be [downloaded](https://www.istat.it/it/files//2020/03/comune-giorno.zip) directly from the [dedicated webpage of ISTAT](https://www.istat.it/it/archivio/240401). This archive contains the number of deaths per day per comune of the first four months for the years 2015-2019 and from 1st January until 28th March for 2020, at the time of writing. If you want to calculate the divergence of the mortality rate for 2020 for a single comune that is included in the dataset, it is rather simple to take the average mortality rate for a given day of the proceeding years (some statisticians calls this "expected mortality") and compare it to the number of persons died the same day in 2020. 
 
-![Number of daily deaths in Bergamo, Italy mean of 2015-2019 vs 2020, 7 days moving average](mortality/bergamo_mortality.png)
+![Number of daily deaths in Bergamo, Italy mean of 2015-2019 vs 2020, 7 days moving average](figures/bergamo_mortality.png)
 
 This diagram shows the expected mortality and the actual mortality in Bergamo, one of the Italian municipalities that was hit particularly hard by the COVID-19 epidemic. (I used here a 7 days moving average with a central window to smooth out the daily fluctuations in the data.)
 
+
+### Excess mortality rate on municipality level
+
+The following diagrams shows the excess mortality during March 2020 in selected Italian municipalities. The blue line shows the daily expected mortality rate i.e. how many person died out of 1000 residents that day between 2015 and 2019. The 95% [confidence interval](https://en.wikipedia.org/wiki/Confidence_interval) is shown by the light blue stripe. The orange line shows the mortality rate for the same day in 2020. The area under the curves for the month of March are painted with a diagonal pattern: the size of these areas effectively tells us how many persons died in the whole month. The difference between these numbers is the excess mortality, most like to be attributed to COVID-19.
+
+| municipiality   |   population | start date          |   expected mortality |   actual mortality | excess mortality rate   | image                                                                  |
+|:----------------|-------------:|:--------------------|---------------------:|-------------------:|:------------------------|:-----------------------------------------------------------------------|
+| Nembro          |        11526 | 2020-02-20 00:00:00 |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
+| Albino          |        17805 | 2020-02-21 00:00:00 |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
+| Seriate         |        25385 | 2020-02-28 00:00:00 |                   16 |                123 | 769%                    | ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)   |
+| Codogno         |        15991 | 2020-02-22 00:00:00 |                   20 |                116 | 580%                    | ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)   |
+| Cremona         |        72680 | 2020-02-21 00:00:00 |                   87 |                342 | 393%                    | ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)   |
+| Pesaro          |        94969 | 2020-02-21 00:00:00 |                  103 |                324 | 315%                    | ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)     |
+| Piacenza        |       103942 | 2020-02-26 00:00:00 |                  117 |                417 | 356%                    | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
+| Tortona         |        27291 | 2020-03-01 00:00:00 |                   27 |                101 | 374%                    | ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)   |
+
+You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
 
 ### Issues of geographic aggregations
 
