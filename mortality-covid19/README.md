@@ -1,6 +1,8 @@
-# How many people really die because of COVID-19 in Italy?
+# How many people really die connected to COVID-19 in Italy?
 
-[First paragraph]
+At the end of February 2020 the COVID-19 epidemic surprised the first European country, Italy. Soon after the local authorities started to publish daily epidemic information including number of confirmed cases and deaths. However after few weeks it became clear that the official data might be flawed because of problems related to data collection methodology and other reasons.
+
+In this article we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities as reported by the Italian National Institute of Statistics and compare it to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures.
 
 
 ## History of publishing COVID-19 epidemic data in Italy
@@ -149,3 +151,5 @@ In the following table we list the estimated excess mortalities on a region leve
 | Marche         |               1265 |            364 | 348%         | ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)                 |
 
 It is clearly visible that there is a huge amount of excessive death not explained by the official numbers. Most likely the number of deaths connected to COVID-19 is heavily underestimated.
+
+Written by: [@jtolgyesi](http://twitter.com/jtolgyesi)
