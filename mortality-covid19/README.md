@@ -73,7 +73,7 @@ This diagram shows the expected mortality and the actual mortality in Bergamo, o
 
 The following diagrams shows the excess mortality during March 2020 in selected Italian municipalities. The blue line shows the daily expected mortality rate i.e. how many person died out of 1000 residents that day between 2015 and 2019. The 95% [confidence interval](https://en.wikipedia.org/wiki/Confidence_interval) is shown by the light blue stripe. The orange line shows the mortality rate for the same day in 2020. The area under the curves for the month of March are painted with a diagonal pattern: the size of these areas effectively tells us how many persons died in the whole month. The difference between these numbers is the excess mortality, most like to be attributed to COVID-19.
 
-| municipiality   |   population | start date   |   expected mortality |   actual mortality | excess mortality rate   | image                                                                  |
+| municipiality   |   population | start&nbsp;date   |   expected mortality |   actual mortality | excess mortality rate   | image                                                                  |
 |:----------------|-------------:|-------------:|---------------------:|-------------------:|------------------------:|:----------------------------------------------------------------------:|
 | Nembro          |        11526 | 2020-02-20   |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
 | Albino          |        17805 | 2020-02-21   |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
