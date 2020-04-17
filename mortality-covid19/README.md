@@ -73,16 +73,16 @@ This diagram shows the expected mortality and the actual mortality in Bergamo, o
 
 The following diagrams shows the excess mortality during March 2020 in selected Italian municipalities. The blue line shows the daily expected mortality rate i.e. how many person died out of 1000 residents that day between 2015 and 2019. The 95% [confidence interval](https://en.wikipedia.org/wiki/Confidence_interval) is shown by the light blue stripe. The orange line shows the mortality rate for the same day in 2020. The area under the curves for the month of March are painted with a diagonal pattern: the size of these areas effectively tells us how many persons died in the whole month. The difference between these numbers is the excess mortality, most like to be attributed to COVID-19.
 
-| municip.        |         pop. | start date   |       exp. mortality |   actual mortality | excess mortality rate   | image                                                                  |
-|:----------------|-------------:|-------------:|---------------------:|-------------------:|------------------------:|:----------------------------------------------------------------------:|
-| Nembro          |        11526 | 2020&#8209;02&#8209;20   |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
-| Albino          |        17805 | 2020-02-21   |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
-| Seriate         |        25385 | 2020-02-28   |                   16 |                123 | 769%                    | ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)   |
-| Codogno         |        15991 | 2020-02-22   |                   20 |                116 | 580%                    | ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)   |
-| Cremona         |        72680 | 2020-02-21   |                   87 |                342 | 393%                    | ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)   |
-| Pesaro          |        94969 | 2020-02-21   |                  103 |                324 | 315%                    | ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)     |
-| Piacenza        |       103942 | 2020-02-26   |                  117 |                417 | 356%                    | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
-| Tortona         |        27291 | 2020-03-01   |                   27 |                101 | 374%                    | ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)   |
+| municipiality   |   population | start_date             |   expected_mortality |   actual_mortality | excess_mortality_rate   | image                                                                  |
+|:----------------|-------------:|-----------------------:|---------------------:|-------------------:|------------------------:|:----------------------------------------------------------------------:|
+| Nembro          |        11526 | 2020&#8209;02&#8209;20 |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
+| Albino          |        17805 | 2020&#8209;02&#8209;21 |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
+| Seriate         |        25385 | 2020&#8209;02&#8209;28 |                   16 |                123 | 769%                    | ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)   |
+| Codogno         |        15991 | 2020&#8209;02&#8209;22 |                   20 |                116 | 580%                    | ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)   |
+| Cremona         |        72680 | 2020&#8209;02&#8209;21 |                   87 |                342 | 393%                    | ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)   |
+| Pesaro          |        94969 | 2020&#8209;02&#8209;21 |                  103 |                324 | 315%                    | ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)     |
+| Piacenza        |       103942 | 2020&#8209;02&#8209;26 |                  117 |                417 | 356%                    | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
+| Tortona         |        27291 | 2020&#8209;03&#8209;01 |                   27 |                101 | 374%                    | ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)   |
 
 You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
 
