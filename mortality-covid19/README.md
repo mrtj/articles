@@ -73,7 +73,7 @@ This diagram shows the expected mortality and the actual mortality in Bergamo, o
 
 The following diagrams shows the excess mortality during March 2020 in selected Italian municipalities. The blue line shows the daily expected mortality rate i.e. how many person died out of 1000 residents that day between 2015 and 2019. The 95% [confidence interval](https://en.wikipedia.org/wiki/Confidence_interval) is shown by the light blue stripe. The orange line shows the mortality rate for the same day in 2020. The area under the curves for the month of March are painted with a diagonal pattern: the size of these areas effectively tells us how many persons died in the whole month. The difference between these numbers is the excess mortality, most like to be attributed to COVID-19.
 
-| municip.        |   population | start_date             |   exp. mortality     |   actual mortality | excess mortality        | image                                                                  |
+| municip.        |   population | start date             |   exp. mortality     |   actual mortality | excess mortality rate   | image                                                                  |
 |:----------------|-------------:|-----------------------:|---------------------:|-------------------:|------------------------:|:----------------------------------------------------------------------:|
 | Nembro          |        11526 | 2020&#8209;02&#8209;20 |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
 | Albino          |        17805 | 2020&#8209;02&#8209;21 |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
@@ -129,3 +129,23 @@ This table shows the population of the municipalities with mortality data availa
   - Marche
   
 Incidentally these are the northern regions of Italy (with the exception of Marche) that were hit most seriously by the COVID-19 epidemic.
+
+
+## Results
+
+The following figure shows the daily excess mortality (calculated subtracting the expect mortality from the actual mortality in 2020) and the number of deaths officially attributed to COVID-19 in March 2020, for the region of Lombardy:
+
+![Excess mortality and COVID-19 deaths during March 2020, in Lombardy](figures/mortality-covid-lombardia.png)
+
+In the following table we list the estimated excess mortalities on a region level for March 2020 (since at the time of the writing official data will not be available) and compare it to the official number of COVID-19 victims. 
+
+| region         |   excess mortality |   covid deaths | rate         | image                                                                                                          |
+|:---------------|-------------------:|---------------:|-------------:|:---------------------------------------------------------------------------------------------------------------|
+| Lombardia      |              14053 |           5938 | 237%         | ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)           |
+| Veneto         |               1768 |            360 | 491%         | ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)                 |
+| Emilia-Romagna |               4350 |           1344 | 324%         | ![Excess mortality and official COVID-19 deaths in Emilia-Romagna](figures/mortality-covid-emilia-romagna.png) |
+| Piemonte       |               3218 |            617 | 522%         | ![Excess mortality and official COVID-19 deaths in Piemonte](figures/mortality-covid-piemonte.png)             |
+| Liguria        |                574 |            358 | 160%         | ![Excess mortality and official COVID-19 deaths in Liguria](figures/mortality-covid-liguria.png)               |
+| Marche         |               1265 |            364 | 348%         | ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)                 |
+
+It is clearly visible that there is a huge amount of excessive death not explained by the official numbers. Most likely the number of deaths connected to COVID-19 is heavily underestimated.
