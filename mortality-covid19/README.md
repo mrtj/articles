@@ -2,7 +2,7 @@
 
 At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) surprised the first European country, Italy. Very soon after the outbreak local authorities started to publish daily epidemic information including the number of confirmed cases and deaths. However after several weeks it became clear that the official data is flawed because of data collection methodology issues and other reasons.
 
-In this article we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities in 2020 as reported by the Italian National Institute of Statistics to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures.
+In this analysis we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities in 2020 as reported by the Italian National Institute of Statistics to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures but also that the lockdown measures by local were effective.
 
 
 ## History of publishing COVID-19 epidemic data in Italy
@@ -100,39 +100,32 @@ Because we do not have the mortality rate for all municipalities in a given regi
 
 The population dataset of all Italian municipalities (as of 1st January 2019) can be [downloaded from ISTAT](http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1). We will use this dataset to calculate the percentage of the population in the municipalities with daily mortality data available compared to the total population of the given region.
 
-This table shows the population of the municipalities with mortality data available for each region and the percentage of this population of the total population of the region.
+This table shows the population of the municipalities with mortality data available for each region, the mean and standard deviation of the mortality per 1000 persons, and the percentage of this population of the total population of the region.
 
-| region                |           pop. with data |  total pop. | rate   |
-|:----------------------|-------------------------:|------------:|-------:|
-| Lombardy              |                  6733446 |    10060574 | 67%    |
-| Lazio                 |                   172113 |     5879082 | 3%     |
-| Campania              |                   198997 |     5801692 | 3%     |
-| Sicily                |                   332775 |     4999891 | 7%     |
-| Veneto                |                  1652086 |     4905854 | 34%    |
-| Emilia-Romagna        |                  2223875 |     4459477 | 50%    |
-| Piedmont              |                  1414378 |     4356406 | 32%    |
-| Apulia                |                   690710 |     4029053 | 17%    |
-| Tuscany               |                  1030982 |     3729641 | 28%    |
-| Calabria              |                    58593 |     1947131 | 3%     |
-| Sardinia              |                   262664 |     1639591 | 16%    |
-| Liguria               |                  1039816 |     1550640 | 67%    |
-| Marche                |                   478153 |     1525271 | 31%    |
-| Abruzzo               |                   170540 |     1311580 | 13%    |
-| Friuli Venezia Giulia |                        0 |     1215220 | 0%     |
-| Trentino-South Tyrol  |                        0 |     1072276 | 0%     |
-| Umbria                |                   211428 |      882015 | 24%    |
-| Basilicata            |                    35507 |      562869 | 6%     |
-| Molise                |                    26577 |      305617 | 9%     |
-| Aosta Valley          |                        0 |      125666 | 0%     |
+| region                |   pop. with data |   total pop. |   mean mortality |   std mortality |   rate |
+|:----------------------|-----------------:|-------------:|--------------------------------:|-------------------------------:|-------:|
+| *Liguria*              |          1039816 |      1550640 |                        1.133550 |                       0.272155 |    67% |
+| *Lombardia*           |          6733446 |     10060574 |                        0.807937 |                       0.326400 |    67% |
+| *Emilia-Romagna*      |          2223875 |      4459477 |                        0.896094 |                       0.241489 |    50% |
+| *Veneto*              |          1652086 |      4905854 |                        0.763848 |                       0.237040 |    34% |
+| *Piemonte*            |          1414378 |      4356406 |                        0.989329 |                       0.242359 |    32% |
+| *Marche*              |           478153 |      1525271 |                        0.930724 |                       0.157216 |    31% |
+| Toscana               |          1030982 |      3729641 |                        0.965044 |                       0.239334 |    28% |
+| Umbria                |           211428 |       882015 |                        0.877165 |                       0.163836 |    24% |
+| Puglia                |           690710 |      4029053 |                        0.773407 |                       0.138124 |    17% |
+| Sardegna              |           262664 |      1639591 |                        0.783619 |                       0.201355 |    16% |
+| Abruzzo               |           170540 |      1311580 |                        0.887098 |                       0.218837 |    13% |
+| Molise                |            26577 |       305617 |                        0.898736 |                       0.204003 |     9% |
+| Sicilia               |           332775 |      4999891 |                        0.860298 |                       0.292168 |     7% |
+| Basilicata            |            35507 |       562869 |                        0.953534 |                       0.313202 |     6% |
+| Campania              |           198997 |      5801692 |                        0.715876 |                       0.225189 |     3% |
+| Calabria              |            58593 |      1947131 |                        0.851881 |                       0.321465 |     3% |
+| Lazio                 |           172113 |      5879082 |                        0.807775 |                       0.150375 |     3% |
+| Friuli Venezia Giulia |                0 |      1215220 |                        0        |                       0        |     0% |
+| Trentino-Alto Adige   |                0 |      1072276 |                        0        |                       0        |     0% |
+| Valle d'Aosta         |                0 |       125666 |                        0        |                       0        |     0% |
 
- We will consider only the regions that have at mortality data available at least for the 30% of the population:
- 
-  - Lombardy
-  - Veneto
-  - Emilia-Romagna
-  - Piedmont
-  - Liguria
-  - Marche
+We will consider only the regions that have at mortality data available at least for the 30% of the population. These regions are written with  italic font in the table above.
   
 Incidentally these are the northern regions of Italy (with the exception of Marche) that were hit most seriously by the COVID-19 epidemic.
 
