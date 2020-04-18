@@ -77,16 +77,17 @@ The following diagrams shows the excess mortality during March 2020 in selected 
 
 For different municipalities different "start date" was selected, i.e. when the 2020 mortality trend stepped out of the confidence interval of the previous years mortality.
 
-| municip.        |   population | start date             |   exp. mortality     |   actual mortality | excess mortality rate   | image                                                                  |
-|:----------------|-------------:|-----------------------:|---------------------:|-------------------:|------------------------:|:----------------------------------------------------------------------:|
-| Nembro          |        11526 | 2020&#8209;02&#8209;20 |                   15 |                149 | 993%                    | ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)     |
-| Albino          |        17805 | 2020&#8209;02&#8209;21 |                   15 |                141 | 940%                    | ![Excess mortality in Albino](figures/mortality-excess-albino.png)     |
-| Seriate         |        25385 | 2020&#8209;02&#8209;28 |                   16 |                123 | 769%                    | ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)   |
-| Codogno         |        15991 | 2020&#8209;02&#8209;22 |                   20 |                116 | 580%                    | ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)   |
-| Cremona         |        72680 | 2020&#8209;02&#8209;21 |                   87 |                342 | 393%                    | ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)   |
-| Pesaro          |        94969 | 2020&#8209;02&#8209;21 |                  103 |                324 | 315%                    | ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)     |
-| Piacenza        |       103942 | 2020&#8209;02&#8209;26 |                  117 |                417 | 356%                    | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
-| Tortona         |        27291 | 2020&#8209;03&#8209;01 |                   27 |                101 | 374%                    | ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)   |
+| municip.   |   population |             start date |   expected mortality |   actual mortality |   excess rate |           date of peak |                                 figure                                 |
+|:-----------|-------------:|-----------------------:|---------------------:|-------------------:|--------------:|-----------------------:|:----------------------------------------------------------------------:|
+| Nembro     |        11526 | 2020&#8209;02&#8209;20 |                   15 |                149 |          993% | 2020&#8209;03&#8209;10 |   ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)   |
+| Albino     |        17805 | 2020&#8209;02&#8209;21 |                   15 |                141 |          940% | 2020&#8209;03&#8209;13 |   ![Excess mortality in Albino](figures/mortality-excess-albino.png)   |
+| Seriate    |        25385 | 2020&#8209;02&#8209;28 |                   16 |                123 |          769% | 2020&#8209;03&#8209;19 |  ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)  |
+| Codogno    |        15991 | 2020&#8209;02&#8209;22 |                   20 |                116 |          580% | 2020&#8209;03&#8209;08 |  ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)  |
+| Cremona    |        72680 | 2020&#8209;02&#8209;21 |                   87 |                342 |          393% | 2020&#8209;03&#8209;15 |  ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)  |
+| Pesaro     |        94969 | 2020&#8209;02&#8209;21 |                  103 |                324 |          315% | 2020&#8209;03&#8209;20 |   ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)   |
+| Piacenza   |       103942 | 2020&#8209;02&#8209;26 |                  117 |                417 |          356% | 2020&#8209;03&#8209;16 | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
+| Tortona    |        27291 | 2020&#8209;03&#8209;01 |                   27 |                101 |          374% | 2020&#8209;03&#8209;18 |  ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)  |
+| Pavia      |        73086 | 2020&#8209;03&#8209;07 |                   50 |                 99 |          198% | 2020&#8209;03&#8209;22 |    ![Excess mortality in Pavia](figures/mortality-excess-pavia.png)    |
 
 You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
 
@@ -149,15 +150,24 @@ The following figure shows the daily excess mortality (calculated subtracting th
 
 In the following table we list the estimated excess mortalities on a region level for March 2020 (since at the time of the writing official data will not be available) and compare it to the official number of COVID-19 victims. 
 
-| region         |   excess mortality |   covid deaths | rate         | image                                                                                                          |
-|:---------------|-------------------:|---------------:|-------------:|:---------------------------------------------------------------------------------------------------------------|
-| Lombardia      |              14053 |           5938 | 237%         | ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)           |
-| Veneto         |               1768 |            360 | 491%         | ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)                 |
-| Emilia-Romagna |               4350 |           1344 | 324%         | ![Excess mortality and official COVID-19 deaths in Emilia-Romagna](figures/mortality-covid-emilia-romagna.png) |
-| Piemonte       |               3218 |            617 | 522%         | ![Excess mortality and official COVID-19 deaths in Piemonte](figures/mortality-covid-piemonte.png)             |
-| Liguria        |                574 |            358 | 160%         | ![Excess mortality and official COVID-19 deaths in Liguria](figures/mortality-covid-liguria.png)               |
-| Marche         |               1265 |            364 | 348%         | ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)                 |
+| region         |   excess mortality |   ufficial covid deaths |   rate |           date of peak |                                                     figure                                                     |
+|:---------------|-------------------:|------------------------:|-------:|-----------------------:|:--------------------------------------------------------------------------------------------------------------:|
+| Lombardia      |              14053 |                    5938 |   237% | 2020&#8209;03&#8209;20 |      ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)      |
+| Veneto         |               1768 |                     360 |   491% | 2020&#8209;03&#8209;18 |         ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)         |
+| Emilia-Romagna |               4350 |                    1344 |   324% | 2020&#8209;03&#8209;21 | ![Excess mortality and official COVID-19 deaths in Emilia-Romagna](figures/mortality-covid-emilia-romagna.png) |
+| Piemonte       |               3218 |                     617 |   522% | 2020&#8209;03&#8209;27 |       ![Excess mortality and official COVID-19 deaths in Piemonte](figures/mortality-covid-piemonte.png)       |
+| Liguria        |                574 |                     358 |   160% | 2020&#8209;03&#8209;19 |        ![Excess mortality and official COVID-19 deaths in Liguria](figures/mortality-covid-liguria.png)        |
+| Marche         |               1265 |                     364 |   348% | 2020&#8209;03&#8209;21 |         ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)         |
 
-It is clearly visible that there is a huge number of excessive deaths not explained by the official figures. Most likely the number of COVID-19 victims in Italy is heavily underestimated.
+It is also worth to pay attention to the "start date" in the table of the sampled municipalities. This date shows when the actual mortality stepped out from the confidence interval of the expected mortality and started to trend upwards. According to the [Italian National Institute of Health](https://www.epicentro.iss.it/coronavirus/) the median time from the onset of symptoms to the eventual deaths is 10 days. The most commonly cited incubation period of COVID-19 is 6-7 days. Subtracting the median incubation period and duration of illness from these dates suggests that the coronavirus disease was widely spread as early as the first days of February 2020 at least in some provinces of Lombardy (for example in Bergamo, Cremona, Pesaro and Lodi). The first endemic cluster was identified only on [21st February](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy) in the city Codogno (province of Lodi).
+
+Let's have a closer look at the "date of peak" column in both tables of municipalities and regions. As we mentioned above, the first site of the epidemic onset included Codogno and surrounding municipalities. In this area the authorities immediately (the same day of 21st February) [enforced a lockdown](https://en.wikipedia.org/wiki/2020_Italy_coronavirus_lockdown#Initial_lockdowns) effectively prohibiting the people to leave their house without serious reason. If we add to this date the median duration of 16-17 days from the infection to the eventual death, we get 8th of March which corresponds exactly to the peak of the mortality in Codogno. 
+
+On 8th March the quarantine zone was expanded to cover much of northern Italy and on the next day to the whole national territory. Approximately two weeks later, around 20-22 March the mortality in other areas started to decrease as well. 
+
+We can conclude that the two main takeaway of this analysis are:
+
+1. There is a huge number of excessive deaths not explained by the official figures. Most likely the number of COVID-19 victims in Italy is heavily underestimated.
+2. The measures of lockdown imposed by the authorities, from the point of view of stopping the growth of the number of victims, were effective.
 
 Written by [@jtolgyesi](http://twitter.com/jtolgyesi)
