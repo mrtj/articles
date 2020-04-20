@@ -1,40 +1,40 @@
 # How many people really die connected to COVID-19 in Italy?
 
-At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) surprised the first European country, Italy. Very soon after the outbreak local authorities started to publish daily epidemic information including the number of confirmed cases and deaths. However after several weeks it became clear that the official data is flawed because of data collection methodology issues and other reasons.
+At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) was a shocking surprise for Italy, the first affected country in Europe. Very soon after the outbreak local authorities started to publish daily epidemic information including the number of confirmed cases and deaths. However after several weeks it became clear that the official data is flawed because of data collection methodology issues and other reasons.
 
 In this analysis we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities in 2020 as reported by the Italian National Institute of Statistics to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures but also that the lockdown measures by local were effective.
 
 
 ## History of publishing COVID-19 epidemic data in Italy
 
-Italy was the first European country to be hit hard by the COVID-19 epidemic in the last days of February 2020. After the initial shock the authorities, particularly the [Civil Protection Department](http://www.protezionecivile.it) started to publish [daily bulletins](http://www.salute.gov.it/portale/nuovocoronavirus/dettaglioContenutiNuovoCoronavirus.jsp?id=5351&area=nuovoCoronavirus&menu=vuoto) about the number of infected persons, deaths and recoveries. A lot of worried epidemiologists, statisticians, data scientist and data enthusiasts started to write computer programs to automatically analyze the bulletin webpage on a daily basis. A lot of effort was dedicated to save the day-to-day evolution of the epidemic and to create time series that later could be analyzed. Others asked the government authorities to publish the same data also in a machine-readable way.
+Italy was the first European country to be hit hard by the COVID-19 epidemic in the last days of February 2020. After the initial shock the authorities, particularly the [Civil Protection Department](http://www.protezionecivile.it) started to publish [daily bulletins](http://www.salute.gov.it/portale/nuovocoronavirus/dettaglioContenutiNuovoCoronavirus.jsp?id=5351&area=nuovoCoronavirus&menu=vuoto) about the number of infected persons, deaths and recoveries. Worried epidemiologists, statisticians, data scientist and data enthusiasts started to write computer programs to automatically analyze the bulletin webpage on a daily basis. A lot of effort was dedicated to register the day-to-day evolution of the epidemic and to create time series that later could be analyzed. The government authorities were asked to publish the same data also in a machine-readable way.
 
-Several days later, on 7th of March, the Civil Protection Department created a [GitHub repository](https://github.com/pcm-dpc/COVID-19) with an extraordinary agility and they started to publish daily updates of the epidemic data as well as historic time series in CSV and JSON format. The daily time series data is currently available on national and regional level for the number of infected, hospitalized (in ICU or not), recovered people, as well as the number of tests carried out that day and the deaths attributed to COVID-19. The total number of confirmed cases is available also on "comune" (municipality). Making available the data with this level of details should be an exemplary transparency of the authorities.
+Several days later, on 7th of March, the Civil Protection Department created a [GitHub repository](https://github.com/pcm-dpc/COVID-19) with an extraordinary agility and started to publish daily updates of the epidemic data as well as historic time series in CSV and JSON format. The daily time series data are currently available on national and regional level for the number of infected, hospitalized (in ICU or not), recovered people, as well as the number of tests carried out that day and the deaths attributed to COVID-19. The total number of confirmed cases is available also on "comune" (municipality) level. Making available the data with this level of details should be an exemplary transparency of the authorities.
 
 
 ## Reliability of the official data
 
-Unfortunately it became clear very soon that the methodology of the _collection_ of this data lacks the same exactitude of _publishing_ the data. This might be due to a number of facts. 
+Unfortunately it became clear very soon that the methodology of the _collection_ of this data lacks the same exactitude as of _publishing_ the data. This might be due to a number of facts. 
 
 First, the Italian healthcare system and the **testing capacities were overwhelmed** in an unprecedented way within a couple of days after the beginning of the outbreak. They had simply no resources for systematic testing and reporting. 
 
-Second, in Italy the [health services are fragmented](https://en.wikipedia.org/wiki/Healthcare_in_Italy) as they are managed on a regional level: in fact each region has its own healthcare system. These organizations interpret the government policies (for example about COVID-19 testing) in sightly different ways so they collect the data also in different ways. 
+Second, in Italy the [healthcare system is fragmented](https://en.wikipedia.org/wiki/Healthcare_in_Italy) as they are managed on a regional level: in fact each region has its own healthcare system. These organizations interpret the government policies (for example about COVID-19 testing) in sightly different ways so they collect the data also in different ways. 
 
-And at last, there might be **political reasons** not to change an established, nevertheless wrong data collection methodology. For example [China changed several times](https://edition.cnn.com/2020/02/21/health/coronavirus-reported-cases-covid-19-change-intl/index.html) its testing policy and on 12th February one such change resulted in a sudden jump in the positive cases. Almost all published diagrams showing the Chinese COVID-19 cases note that the cause of this jump is a change in the methodology, but not all people read the small letter annotations. There is a real risk that such a methodology change can cause confusion or even scare in the public.
+And at last, there might be **political reasons** not to change an established, nevertheless wrong data collection methodology. [China changed several times](https://edition.cnn.com/2020/02/21/health/coronavirus-reported-cases-covid-19-change-intl/index.html) its testing policy and on 12th February one such change resulted in a sudden jump in the positive cases. Almost all published diagrams showing the Chinese COVID-19 cases note that the cause of this jump is a change in the methodology, but not all people read the small letter annotations. There is a real risk that such a methodology change can cause confusion or even scare in the public.
 
 ![China changed case definition on 12th February](figures/china_case_definition.png)
 
 
 ### Testing only people reaching the hospital
 
-During March representatives of Italian national, regional and local authorities acknowledged the flaws of the COVID-19 epidemic data collection methods. As soon as 28 February Ministry of Health of Italy [announced that they will not to count the asymptomatic cases](https://www.repubblica.it/cronaca/2020/02/28/news/cambia_il_metodo_di_conteggio_esclusi_i_positivi_asintomatici-249765660/) in future statistics even if they were tested positive. 
+During March representatives of Italian national, regional and local authorities acknowledged the flaws of the COVID-19 epidemic data collection methods. As soon as 28 February Ministry of Health of Italy [announced that they will not count the asymptomatic cases](https://www.repubblica.it/cronaca/2020/02/28/news/cambia_il_metodo_di_conteggio_esclusi_i_positivi_asintomatici-249765660/) in future statistics even if they were tested positive. 
 
-Several days after they decided to **do virology tests only for persons who have reached the hospital**, and stopped home testing at all because of capacity issues. After the first week of March the healthcare system at least in several territories of Lombardy became so overwhelmed that they could not provide hospital care even for some serious cases. In the emergency or even telephone triage factors like patient age and preexisting medical conditions were considered more and more aggressively. Only people with considerably good prognosis could get hospitalization. 
+Several days later they decided to **do virology tests only for persons who have reached the hospital**, and stopped home testing at all because of capacity issues. After the first week of March the healthcare system at least in several territories of Lombardy became so overwhelmed that they could not provide hospital care even for some serious cases. In the emergency or even telephone triage factors like patient age and preexisting medical conditions were considered more and more aggressively. Only people with considerably good prognosis could get hospitalization. 
 
 In practice this meant that a number of elderly and vulnerable people **died at their home** because of pneumonia or heart failure. As home or post-mortem testing was not available, these victims were never tested for COVID-19 and so they are invisible for the statistics. 
 
 
-### Number of ICU cases capped on the number of beds
+### Number of ICU cases capped at the number of beds
 
 Having the hospital beds and especially the ICU beds capacity utilized near at 100% means also that **number of cases in hospital or ICU unit**  does not reflect the number of persons who actually needed it. These numbers are capped at the number of available places. Furthermore this data reflects only a daily snapshot of the situation without the details of how many new patients are accepted in these structures and how many are discharged. 
 
@@ -100,30 +100,33 @@ Because we do not have the mortality rate for all municipalities in a given regi
 
 The population dataset of all Italian municipalities (as of 1st January 2019) can be [downloaded from ISTAT](http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1). We will use this dataset to calculate the percentage of the population in the municipalities with daily mortality data available compared to the total population of the given region.
 
-This table shows the population of the municipalities with mortality data available for each region, the mean and standard deviation of the mortality per 1000 persons, and the percentage of this population of the total population of the region.
+This table shows:
+ - the population of the municipalities with mortality data available for each region, 
+ - the mean and standard deviation of the mortality per 1000 persons in the municipalities, weighted by the municipality population,
+ - and the percentage of this population to the total population of the region.
 
 | region                |   pop. with data |   total pop. |   mean mortality |   std mortality |   rate |
-|:----------------------|-----------------:|-------------:|--------------------------------:|-------------------------------:|-------:|
-| *Liguria*              |          1039816 |      1550640 |                        1.133550 |                       0.272155 |    67% |
-| *Lombardia*           |          6733446 |     10060574 |                        0.807937 |                       0.326400 |    67% |
-| *Emilia-Romagna*      |          2223875 |      4459477 |                        0.896094 |                       0.241489 |    50% |
-| *Veneto*              |          1652086 |      4905854 |                        0.763848 |                       0.237040 |    34% |
-| *Piemonte*            |          1414378 |      4356406 |                        0.989329 |                       0.242359 |    32% |
-| *Marche*              |           478153 |      1525271 |                        0.930724 |                       0.157216 |    31% |
-| Toscana               |          1030982 |      3729641 |                        0.965044 |                       0.239334 |    28% |
-| Umbria                |           211428 |       882015 |                        0.877165 |                       0.163836 |    24% |
-| Puglia                |           690710 |      4029053 |                        0.773407 |                       0.138124 |    17% |
-| Sardegna              |           262664 |      1639591 |                        0.783619 |                       0.201355 |    16% |
-| Abruzzo               |           170540 |      1311580 |                        0.887098 |                       0.218837 |    13% |
-| Molise                |            26577 |       305617 |                        0.898736 |                       0.204003 |     9% |
-| Sicilia               |           332775 |      4999891 |                        0.860298 |                       0.292168 |     7% |
-| Basilicata            |            35507 |       562869 |                        0.953534 |                       0.313202 |     6% |
-| Campania              |           198997 |      5801692 |                        0.715876 |                       0.225189 |     3% |
-| Calabria              |            58593 |      1947131 |                        0.851881 |                       0.321465 |     3% |
-| Lazio                 |           172113 |      5879082 |                        0.807775 |                       0.150375 |     3% |
-| Friuli Venezia Giulia |                0 |      1215220 |                        0        |                       0        |     0% |
-| Trentino-Alto Adige   |                0 |      1072276 |                        0        |                       0        |     0% |
-| Valle d'Aosta         |                0 |       125666 |                        0        |                       0        |     0% |
+|:----------------------|-----------------:|-------------:|-----------------:|----------------:|-------:|
+| *Liguria*             |          1039816 |      1550640 |         1.133550 |        0.272155 |    67% |
+| *Lombardia*           |          6733446 |     10060574 |         0.807937 |        0.326400 |    67% |
+| *Emilia-Romagna*      |          2223875 |      4459477 |         0.896094 |        0.241489 |    50% |
+| *Veneto*              |          1652086 |      4905854 |         0.763848 |        0.237040 |    34% |
+| *Piemonte*            |          1414378 |      4356406 |         0.989329 |        0.242359 |    32% |
+| *Marche*              |           478153 |      1525271 |         0.930724 |        0.157216 |    31% |
+| Toscana               |          1030982 |      3729641 |         0.965044 |        0.239334 |    28% |
+| Umbria                |           211428 |       882015 |         0.877165 |        0.163836 |    24% |
+| Puglia                |           690710 |      4029053 |         0.773407 |        0.138124 |    17% |
+| Sardegna              |           262664 |      1639591 |         0.783619 |        0.201355 |    16% |
+| Abruzzo               |           170540 |      1311580 |         0.887098 |        0.218837 |    13% |
+| Molise                |            26577 |       305617 |         0.898736 |        0.204003 |     9% |
+| Sicilia               |           332775 |      4999891 |         0.860298 |        0.292168 |     7% |
+| Basilicata            |            35507 |       562869 |         0.953534 |        0.313202 |     6% |
+| Campania              |           198997 |      5801692 |         0.715876 |        0.225189 |     3% |
+| Calabria              |            58593 |      1947131 |         0.851881 |        0.321465 |     3% |
+| Lazio                 |           172113 |      5879082 |         0.807775 |        0.150375 |     3% |
+| Friuli Venezia Giulia |                0 |      1215220 |         0        |        0        |     0% |
+| Trentino-Alto Adige   |                0 |      1072276 |         0        |        0        |     0% |
+| Valle d'Aosta         |                0 |       125666 |         0        |        0        |     0% |
 
 We will consider only the regions that have at mortality data available at least for the 30% of the population. These regions are written with  italic font in the table above.
   
@@ -143,7 +146,7 @@ The following figure shows the daily excess mortality (calculated subtracting th
 
 In the following table we list the estimated excess mortalities on a region level for March 2020 (since at the time of the writing official data will not be available) and compare it to the official number of COVID-19 victims. 
 
-| region         |   excess mortality |   ufficial covid deaths |   rate |           date of peak |                                                     figure                                                     |
+| region         |   excess mortality |   official COVID-19 deaths |   rate |           date of peak |                                                     figure                                                     |
 |:---------------|-------------------:|------------------------:|-------:|-----------------------:|:--------------------------------------------------------------------------------------------------------------:|
 | Lombardia      |              14053 |                    5938 |   237% | 2020&#8209;03&#8209;20 |      ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)      |
 | Veneto         |               1768 |                     360 |   491% | 2020&#8209;03&#8209;18 |         ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)         |
