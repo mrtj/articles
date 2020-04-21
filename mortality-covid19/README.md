@@ -70,7 +70,7 @@ The daily mortality rate for the participating municipalities can be [downloaded
 
 The following diagram shows the expected mortality and the actual mortality in Bergamo, one of the Italian municipalities that was hit particularly hard by the COVID-19 epidemic. (We used here a 7 days moving average with a central window to smooth out the daily fluctuations in the data.)
 
-![Number of daily deaths in Bergamo, Italy mean of 2015-2019 vs 2020, 7 days moving average](figures/bergamo_mortality.png)
+![Number of daily deaths in Bergamo, Italy mean of 2015-2019 vs 2020, 7 days moving average](figures/bergamo-mortality.png)
 
 
 ### Excess mortality rate on municipality level
