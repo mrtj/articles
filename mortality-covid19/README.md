@@ -81,15 +81,18 @@ For different municipalities different "start date" was selected, i.e. when the 
 
 | municip.   |   population |             start date |   expected mortality |   actual mortality |   excess rate |           date of peak |                                 figure                                 |
 |:-----------|-------------:|-----------------------:|---------------------:|-------------------:|--------------:|-----------------------:|:----------------------------------------------------------------------:|
-| Nembro     |        11526 | 2020&#8209;02&#8209;20 |                   15 |                149 |          993% | 2020&#8209;03&#8209;10 |   ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)   |
-| Albino     |        17805 | 2020&#8209;02&#8209;21 |                   15 |                141 |          940% | 2020&#8209;03&#8209;13 |   ![Excess mortality in Albino](figures/mortality-excess-albino.png)   |
-| Seriate    |        25385 | 2020&#8209;02&#8209;28 |                   16 |                123 |          769% | 2020&#8209;03&#8209;19 |  ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)  |
-| Codogno    |        15991 | 2020&#8209;02&#8209;22 |                   20 |                116 |          580% | 2020&#8209;03&#8209;08 |  ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)  |
-| Cremona    |        72680 | 2020&#8209;02&#8209;21 |                   87 |                342 |          393% | 2020&#8209;03&#8209;15 |  ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)  |
-| Pesaro     |        94969 | 2020&#8209;02&#8209;21 |                  103 |                324 |          315% | 2020&#8209;03&#8209;20 |   ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)   |
-| Piacenza   |       103942 | 2020&#8209;02&#8209;26 |                  117 |                417 |          356% | 2020&#8209;03&#8209;16 | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
-| Tortona    |        27291 | 2020&#8209;03&#8209;01 |                   27 |                101 |          374% | 2020&#8209;03&#8209;18 |  ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)  |
-| Pavia      |        73086 | 2020&#8209;03&#8209;07 |                   50 |                 99 |          198% | 2020&#8209;03&#8209;22 |    ![Excess mortality in Pavia](figures/mortality-excess-pavia.png)    |
+| Nembro     |        11526 | 2020&#8209;02&#8209;20 |                   17 |                161 |          947% | 2020&#8209;03&#8209;10 |   ![Excess mortality in Nembro](figures/mortality-excess-nembro.png)   |
+| Albino     |        17805 | 2020&#8209;02&#8209;21 |                   18 |                166 |          922% | 2020&#8209;03&#8209;13 |   ![Excess mortality in Albino](figures/mortality-excess-albino.png)   |
+| Seriate    |        25385 | 2020&#8209;02&#8209;28 |                   19 |                137 |          721% | 2020&#8209;03&#8209;19 |  ![Excess mortality in Seriate](figures/mortality-excess-seriate.png)  |
+| Codogno    |        15991 | 2020&#8209;02&#8209;22 |                   23 |                130 |          565% | 2020&#8209;03&#8209;08 |  ![Excess mortality in Codogno](figures/mortality-excess-codogno.png)  |
+| Cremona    |        72680 | 2020&#8209;02&#8209;21 |                  102 |                407 |          399% | 2020&#8209;03&#8209;15 |  ![Excess mortality in Cremona](figures/mortality-excess-cremona.png)  |
+| Pesaro     |        94969 | 2020&#8209;02&#8209;21 |                  123 |                388 |          315% | 2020&#8209;03&#8209;20 |   ![Excess mortality in Pesaro](figures/mortality-excess-pesaro.png)   |
+| Piacenza   |       103942 | 2020&#8209;02&#8209;26 |                  141 |                512 |          363% | 2020&#8209;03&#8209;16 | ![Excess mortality in Piacenza](figures/mortality-excess-piacenza.png) |
+| Tortona    |        27291 | 2020&#8209;03&#8209;01 |                   34 |                121 |          356% | 2020&#8209;03&#8209;18 |  ![Excess mortality in Tortona](figures/mortality-excess-tortona.png)  |
+| Pavia      |        73086 | 2020&#8209;03&#8209;07 |                   66 |                141 |          214% | 2020&#8209;03&#8209;22 |    ![Excess mortality in Pavia](figures/mortality-excess-pavia.png)    |
+| Parma      |       196518 | 2020&#8209;03&#8209;07 |                  156 |                520 |          333% | 2020&#8209;03&#8209;20 |    ![Excess mortality in Parma](figures/mortality-excess-parma.png)    |
+| Brescia    |       198536 | 2020&#8209;03&#8209;07 |                  165 |                589 |          357% | 2020&#8209;03&#8209;20 |  ![Excess mortality in Brescia](figures/mortality-excess-brescia.png)  |
+| Milano     |      1378689 | 2020&#8209;03&#8209;07 |                 1085 |               1817 |          167% | 2020&#8209;03&#8209;24 |   ![Excess mortality in Milano](figures/mortality-excess-milano.png)   |
 
 You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
 
@@ -109,23 +112,23 @@ This table shows:
 
 | region                |   pop. with data |   total pop. |   mean mortality |   std mortality |   rate |
 |:----------------------|-----------------:|-------------:|-----------------:|----------------:|-------:|
-| *Liguria*             |          1039816 |      1550640 |         1.133550 |        0.272155 |    67% |
-| *Lombardia*           |          6733446 |     10060574 |         0.807937 |        0.326400 |    67% |
-| *Emilia-Romagna*      |          2223875 |      4459477 |         0.896094 |        0.241489 |    50% |
-| *Veneto*              |          1652086 |      4905854 |         0.763848 |        0.237040 |    34% |
-| *Piemonte*            |          1414378 |      4356406 |         0.989329 |        0.242359 |    32% |
-| *Marche*              |           478153 |      1525271 |         0.930724 |        0.157216 |    31% |
-| Toscana               |          1030982 |      3729641 |         0.965044 |        0.239334 |    28% |
-| Umbria                |           211428 |       882015 |         0.877165 |        0.163836 |    24% |
-| Puglia                |           690710 |      4029053 |         0.773407 |        0.138124 |    17% |
-| Sardegna              |           262664 |      1639591 |         0.783619 |        0.201355 |    16% |
-| Abruzzo               |           170540 |      1311580 |         0.887098 |        0.218837 |    13% |
-| Molise                |            26577 |       305617 |         0.898736 |        0.204003 |     9% |
-| Sicilia               |           332775 |      4999891 |         0.860298 |        0.292168 |     7% |
-| Basilicata            |            35507 |       562869 |         0.953534 |        0.313202 |     6% |
-| Campania              |           198997 |      5801692 |         0.715876 |        0.225189 |     3% |
-| Calabria              |            58593 |      1947131 |         0.851881 |        0.321465 |     3% |
-| Lazio                 |           172113 |      5879082 |         0.807775 |        0.150375 |     3% |
+| *Lombardia*           |          7252549 |     10060574 |         0.993688 |        0.349833 |    72% |
+| *Liguria*             |          1071658 |      1550640 |         1.40127  |        0.281436 |    69% |
+| *Emilia-Romagna*      |          2718973 |      4459477 |         1.12105  |        0.281772 |    61% |
+| *Veneto*              |          2002736 |      4905854 |         0.956235 |        0.285533 |    41% |
+| *Piemonte*            |          1693222 |      4356406 |         1.21317  |        0.303251 |    39% |
+| Marche                |           513284 |      1525271 |         1.1562   |        0.182859 |    34% |
+| Toscana               |          1174102 |      3729641 |         1.20464  |        0.284194 |    31% |
+| Umbria                |           211428 |       882015 |         1.08825  |        0.19936  |    24% |
+| Sardegna              |           388492 |      1639591 |         0.933058 |        0.250507 |    24% |
+| Puglia                |           749628 |      4029053 |         0.970157 |        0.160312 |    19% |
+| Abruzzo               |           170540 |      1311580 |         1.1116   |        0.266636 |    13% |
+| Molise                |            26577 |       305617 |         1.08042  |        0.317319 |     9% |
+| Basilicata            |            46649 |       562869 |         1.28498  |        0.413294 |     8% |
+| Sicilia               |           361721 |      4999891 |         1.07068  |        0.330909 |     7% |
+| Calabria              |            98955 |      1947131 |         1.05185  |        0.347759 |     5% |
+| Campania              |           258209 |      5801692 |         0.896063 |        0.263229 |     4% |
+| Lazio                 |           184596 |      5879082 |         0.993831 |        0.166596 |     3% |
 | Friuli Venezia Giulia |                0 |      1215220 |         0        |        0        |     0% |
 | Trentino-Alto Adige   |                0 |      1072276 |         0        |        0        |     0% |
 | Valle d'Aosta         |                0 |       125666 |         0        |        0        |     0% |
@@ -149,13 +152,13 @@ The following figure shows the daily excess mortality (calculated subtracting th
 In the following table we list the estimated excess mortalities on a region level for March 2020 (since at the time of the writing official data will not be available) and compare it to the official number of COVID-19 victims. 
 
 | region         |   excess mortality |   official COVID-19 deaths |   rate |           date of peak |                                                     figure                                                     |
-|:---------------|-------------------:|------------------------:|-------:|-----------------------:|:--------------------------------------------------------------------------------------------------------------:|
-| Lombardia      |              14053 |                    5938 |   237% | 2020&#8209;03&#8209;20 |      ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)      |
-| Veneto         |               1768 |                     360 |   491% | 2020&#8209;03&#8209;18 |         ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)         |
-| Emilia-Romagna |               4350 |                    1344 |   324% | 2020&#8209;03&#8209;21 | ![Excess mortality and official COVID-19 deaths in Emilia-Romagna](figures/mortality-covid-emilia-romagna.png) |
-| Piemonte       |               3218 |                     617 |   522% | 2020&#8209;03&#8209;27 |       ![Excess mortality and official COVID-19 deaths in Piemonte](figures/mortality-covid-piemonte.png)       |
-| Liguria        |                574 |                     358 |   160% | 2020&#8209;03&#8209;19 |        ![Excess mortality and official COVID-19 deaths in Liguria](figures/mortality-covid-liguria.png)        |
-| Marche         |               1265 |                     364 |   348% | 2020&#8209;03&#8209;21 |         ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)         |
+|:---------------|-------------------:|---------------------------:|-------:|-----------------------:|:--------------------------------------------------------------------------------------------------------------:|
+| Lombardia      |              17917 |                       8650 |   207% | 2020&#8209;03&#8209;22 |      ![Excess mortality and official COVID-19 deaths in Lombardia](figures/mortality-covid-lombardia.png)      |
+| Veneto         |               2235 |                        605 |   369% | 2020&#8209;03&#8209;23 |         ![Excess mortality and official COVID-19 deaths in Veneto](figures/mortality-covid-veneto.png)         |
+| Emilia-Romagna |               4845 |                       1977 |   245% | 2020&#8209;03&#8209;21 | ![Excess mortality and official COVID-19 deaths in Emilia-Romagna](figures/mortality-covid-emilia-romagna.png) |
+| Piemonte       |               4012 |                       1128 |   356% | 2020&#8209;03&#8209;25 |       ![Excess mortality and official COVID-19 deaths in Piemonte](figures/mortality-covid-piemonte.png)       |
+| Liguria        |               1093 |                        542 |   202% | 2020&#8209;03&#8209;21 |        ![Excess mortality and official COVID-19 deaths in Liguria](figures/mortality-covid-liguria.png)        |
+| Marche         |               1657 |                        574 |   289% | 2020&#8209;03&#8209;21 |         ![Excess mortality and official COVID-19 deaths in Marche](figures/mortality-covid-marche.png)         |
 
 It is also worth to pay attention to the "start date" in the table of the sampled municipalities. This date shows when the actual mortality stepped out from the confidence interval of the expected mortality and started to trend upwards. According to the [Italian National Institute of Health](https://www.epicentro.iss.it/coronavirus/) the median time from the onset of symptoms to the eventual deaths is 10 days. The most commonly cited incubation period of COVID-19 is 6-7 days. Subtracting the median incubation period and duration of illness from these dates suggests that the coronavirus disease was widely spread as early as the first days of February 2020 at least in some provinces of Lombardy (for example in Bergamo, Cremona, Pesaro and Lodi). The first endemic cluster was identified only on [21st February](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy) in the city Codogno (province of Lodi).
 
