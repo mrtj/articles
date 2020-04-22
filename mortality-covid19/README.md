@@ -1,6 +1,6 @@
 # How many people really die connected to COVID-19 in Italy?
 
-> This post is also published on [Medium](https://medium.com/@janos.tolgyesi/how-many-people-really-die-connected-to-covid-19-in-italy-e6facbf0c862).
+> This post is also published on [Medium](https://medium.com/@janos.tolgyesi/how-many-people-really-die-connected-to-covid-19-in-italy-e6facbf0c862) and on [LinkedIn](https://www.linkedin.com/pulse/how-many-people-really-die-connected-covid-19-italy-janos-tolgyesi/).
 
 At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) was a shocking surprise for Italy, the first affected country in Europe. Very soon after the outbreak local authorities started to publish daily epidemic information including the number of confirmed cases and deaths. However after several weeks it became clear that the official data is flawed because of data collection methodology issues and other reasons.
 
