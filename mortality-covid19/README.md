@@ -4,7 +4,7 @@
 
 At the end of February 2020 the [COVID-19 epidemic](https://en.wikipedia.org/wiki/2019–20_coronavirus_pandemic) was a shocking surprise for Italy, the first affected country in Europe. Very soon after the outbreak local authorities started to publish daily epidemic information including the number of confirmed cases and deaths. However after several weeks it became clear that the official data is flawed because of data collection methodology issues and other reasons.
 
-In this analysis we make an attempt to estimate the real number of victims of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities in 2020 as reported by the Italian National Institute of Statistics to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures but also that the lockdown measures by local were effective.
+In this analysis we make an attempt to estimate the real death toll of the COVID-19 epidemic during March 2020 in several regions of Italy. We compare the daily mortalities in 2020 as reported by the Italian National Institute of Statistics to the same period of previous years. We will see that the real death toll of the epidemic is most likely several times underestimated by the official figures but also that the lockdown measures by local authorities were effective.
 
 
 ## History of publishing COVID-19 epidemic data in Italy
@@ -91,7 +91,7 @@ For different municipalities different "start date" was selected, i.e. when the 
 | Tortona    |        27291 | 2020&#8209;03&#8209;01 |                   34 |                121 |          356% | 2020&#8209;03&#8209;18 |  <img src="figures/mortality-excess-tortona.png" alt="Excess mortality in Tortona" height="50px"/>  |
 | Pavia      |        73086 | 2020&#8209;03&#8209;07 |                   66 |                141 |          214% | 2020&#8209;03&#8209;22 |    <img src="figures/mortality-excess-pavia.png" alt="Excess mortality in Pavia" height="50px"/>    |
 
-You can download the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv). 
+You can have a look at the bigger figures for the municipalities above: [Nembro](figures/mortality-excess-nembro.png), [Albino](figures/mortality-excess-albino.png), [Seriate](figures/mortality-excess-seriate.png), [Codogno](figures/mortality-excess-codogno.png), [Cremona](figures/mortality-excess-cremona.png), [Pesaro](figures/mortality-excess-pesaro.png), [Piacenza](figures/mortality-excess-piacenza.png), [Tortona](figures/mortality-excess-tortona.png), [Pavia](figures/mortality-excess-pavia.png) and the excess mortality values and rate during March 2020 for all Italian municipalities with available data from [here](data/excess_mortality_march_2020.csv).
 
 
 ### Issues of geographic aggregations
@@ -156,6 +156,8 @@ In the following table we list the estimated excess mortalities on a region leve
 | Piemonte       |               4012 |                       1128 |   356% | 2020&#8209;03&#8209;25 |       <img src="figures/mortality-covid-piemonte.png" alt="Excess mortality and official COVID-19 deaths in Piemonte" height="50px"/>       |
 | Liguria        |               1093 |                        542 |   202% | 2020&#8209;03&#8209;21 |        <img src="figures/mortality-covid-liguria.png" alt="Excess mortality and official COVID-19 deaths in Liguria" height="50px"/>        |
 | Marche         |               1657 |                        574 |   289% | 2020&#8209;03&#8209;21 |         <img src="figures/mortality-covid-marche.png" alt="Excess mortality and official COVID-19 deaths in Marche" height="50px"/>         |
+
+You can also download the bigger figures: [Lombardia](figures/mortality-covid-lombardia.png), [Veneto](figures/mortality-covid-veneto.png), [Emilia-Romagna](figures/mortality-covid-emilia-romagna.png), [Piemonte](figures/mortality-covid-piemonte.png), [Liguria](figures/mortality-covid-liguria.png), [Marche](figures/mortality-covid-marche.png).
 
 It is also worth to pay attention to the "start date" in the table of the sampled municipalities. This date shows when the actual mortality stepped out from the confidence interval of the expected mortality and started to trend upwards. According to the [Italian National Institute of Health](https://www.epicentro.iss.it/coronavirus/) the median time from the onset of symptoms to the eventual deaths is 10 days. The most commonly cited incubation period of COVID-19 is 6-7 days. Subtracting the median incubation period and duration of illness from these dates suggests that the coronavirus disease was widely spread as early as the first days of February 2020 at least in some provinces of Lombardy (for example in Bergamo, Cremona, Pesaro and Lodi). The first endemic cluster was identified only on [21st February](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy) in the city Codogno (province of Lodi).
 
