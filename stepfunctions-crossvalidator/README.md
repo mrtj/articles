@@ -11,7 +11,7 @@ Cross-validation is a powerful technique to build  machine learning models that 
 
 > If you know the concept of cross-validation feel free to jump directly to section introducing [SMX-Validator](#smx-validator).
 
-### Small datasets and sample distribution
+### The problem of small datasets and sample distribution
 
 Imagine the antelopes of the savanna entrust you to train an image classifier model that helps them to recognize jaguars in a picture. They give you 50 photos of a jaguar and 50 photos of the savanna with no jaguars. You divide the dataset into a training set of 80 photos and a test set of 20 photos, taking care that in each set there would be equal number of jaguar and non-jaguar photos. You train your model with your favorite image classifier algorithm and get an impressive validation accuracy of 100%. 
 
@@ -93,7 +93,7 @@ The application is built upon several AWS services:
  1. You will need an AWS account. If you don't have one yet, open a [new one](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
  2. AWS offers a [free tier](https://aws.amazon.com/free/) for new account. However GPU instances (highly recommended for training image classifiers) are not included so you should expect some training costs, in the order of magnitude of a several USDs.
  3. A dataset that you want to train on. In the [Prepare your data](#prepare-your-data) section below I will describe how to get a dataset if you don't have already one.
- 4. SMX-Validator is a [Serverless Application Model (SAM)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) application. You will need the the [SAM Command Line Interface (CLI)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) to deploy it to your AWS account. Install the SAM CLI with Docker and setup your AWS credentials as described in the documentation.
+ 4. SMX-Validator is a [Serverless Application Model (SAM)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) application. You can [deploy it directly](https://serverlessrepo.aws.amazon.com/applications/eu-west-1/043458249825/SMX-Validator) from the [Serverless Application Repository (SAR)](https://aws.amazon.com/serverless/serverlessrepo/) or you can build it manually with the [SAM Command Line Interface (CLI)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) and deploy it to your AWS account. If you choose manual installation you should install the SAM CLI with Docker and setup your AWS credentials as described in the documentation.
 
 ### Supported SageMaker algorithms and containers
 
@@ -125,24 +125,14 @@ Remember to change `my_bucket/dogs_vs_cats` to the bucket name and prefix of you
 
 ### Deploy SMX-Validator
 
-Clone the git repository of SMX-Validator to your computer.
+[SMX-Validator is published on AWS SAR](https://serverlessrepo.aws.amazon.com/applications/eu-west-1/043458249825/SMX-Validator). The simplest way to deploy the application is clicking the "Deploy" button on the application page. You will be asked to fill out two parameters before deploying the application:
 
-```bash
-$ git clone [smx-validator-repo-url]
-$ cd smx-validator
-```
+- `InputBucketName`: the name of the S3 bucket where you uploaded your dataset. At deployment time an [IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) will be created that allows the application to read data from this bucket.
+- `OutputBucketName`: the name of an S3 bucket where the application can write partial results and working data. Reading and writing data to this bucket will be granted to the application via the IAM role above.
 
-Build and deploy the application with the SAM CLI.
+You might want to create these two buckets before deploying the application. You should also acknowledge that the app will create custom IAM roles. These roles enable the application to start SageMaker training jobs and to read/write from/to the above buckets.
 
-```bash
-$ sam build --use-container
-$ sam deploy --guided
-```
-
-The SAM CLI will guide you through the deployment process. It will ask you the value of some parameters specific to SMX-Validator:
-
- - `InputBucketName`: the name of the S3 bucket where you uploaded your dataset. At deployment time an [IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) will be created that allows the application to read data from this bucket.
- - `OutputBucketName`: the name of an S3 bucket where the application can write partial results and working data. Reading and writing data to this bucket will be granted to the application via the IAM role above.
+Alternatively you can clone the git repo of SMX-Validator and build the application with the [SAM-CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html). Follow the [readme in the project repository](https://github.com/mrtj/smx-validator) for details.
 
 ### Start a cross-validated training
 
@@ -172,7 +162,7 @@ Once you created your input json file, you have different options to start the e
 
 SMX-Validator will split the input dataset into folds, assemble the training and test sets and launch *k* training jobs possibly in parallel. The number of concurrently executed jobs is specified in the state machine specification file (by default two) and can be adjusted to the number of available ml-instances in your AWS account. The diagram below illustrates the state machine of SMX-Validator. The steps in the light green boxes are executed concurrently.
 
-![SMX-Validator State Machine](images/smx-statemachine.png)  
+![SMX-Validator State Machine](images/smx-statemachine-sq.png)  
 *Illustration by the author*
 
 ### Training jobs
@@ -186,6 +176,13 @@ crossvalidator-{input.job_config.name}-{YYYYMMDD}-{HHMMSS}-fold{fold_idx}
 where `{input.job_config.name}` is the job name from the input configuration, `{YYYYMMDD}-{HHMMSS}` is the timestamp at the start job and `{fold_idx}` is the zero-based index of the round.
 
 You can find all training jobs launched by SMX-Validator in the [SageMaker Training Jobs](https://console.aws.amazon.com/sagemaker/home#/jobs) console. On the page of a single training job you can find the diagram of the training and validation metrics during the training , as well as the final metric values.
+
+The details of the training jobs will be reported also in the Step Functions execution output json. This json will contain the following fields:
+
+- `job_config`: Parameters of generic for the whole cross-validated training job, like job name, SageMaker Experiment and Trial name, job input and output data.
+- `crossvalidation`: Cross-validation parameters, like number of splits used in the job.
+- `training`: The template structures used to create the training jobs.
+- `splits`: This array contains the detailed results of each training job. It corresponds to the output of the `DescribeTrainingJob` SageMaker API call. Other than the exact training job inputs you can find the training time and duration, billable seconds, final metrics value and output artifacts location in this structure.
 
 ## Conclusion
 
