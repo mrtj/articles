@@ -179,7 +179,7 @@ Once you created your input JSON file, you have different options to start the e
 
 SMX-Validator will split the input dataset into folds, assemble the training and test sets and launch k training jobs possibly in parallel. You can adjust the number of concurrently executed jobs in the state machine specification file (by default two) to the number of available ml-instances in your AWS account. The diagram below illustrates the state machine of the SMX-Validator. The steps in the dashed boxes are executed concurrently.
 
-![SMX-Validator State Machine](images/smx-statemachine-sq.png)  
+![SMX-Validator State Machine](images/smx-statemachine-rect.png)  
 *Illustration by the author*
 
 ### Training jobs
